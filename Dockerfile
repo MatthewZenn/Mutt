@@ -1,3 +1,8 @@
-FROM httpd:2.4-alpine
-RUN rm /usr/local/apache2/htdocs/index.html
-COPY ./www/ /usr/local/apache2/htdocs/
+FROM node:14-alpine
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN yarn install
+COPY . .
+EXPOSE 8080
+CMD ["npm", "run", "serve"]
