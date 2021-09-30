@@ -1,12 +1,17 @@
 <template>
   <div id="app">
     <header class="nav">
-      <img class="logo" src="Logo.svg" alt="">
+      <img class="logo" src="Logo.svg" alt="" @click="moveUp">
     </header>
     <div class="link">
       <h2>Using <a href='https://dog.ceo/dog-api/'>https://dog.ceo/dog-api/</a></h2>
     </div>
-    <Card />
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
   </div>
 </template>
 
@@ -17,6 +22,16 @@ export default {
   name: 'App',
   components: {
     Card
+  },
+
+  methods:{
+      moveUp(){
+           window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+});
+      }
   }
 }
 </script>
@@ -25,6 +40,9 @@ export default {
 html, body {
   background-color: #23272A;
   color: white;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 .link {
   position: absolute;
@@ -44,12 +62,13 @@ a {
 .nav {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   height: 80px;
   width: 100%;
   top: 0;
   left: 0;
   background-color: #2C2F33;
+  z-index: 999;
 }
 .logo {
   width: 15rem;
@@ -58,5 +77,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000;
+  cursor: pointer;
 }
 </style>

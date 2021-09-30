@@ -32,14 +32,12 @@ export default {
   left: 50%;
   transform: translate(-50%, 0);
   background-color: #2C2F33;
-  border: 5px solid #2C2F33;
-  border-radius: 10px;
+  border: 8px solid #23272A;
 }
 .dog {
   width: 22rem;
   height: 22rem;
   position: relative;
   object-fit: contain;
-  border-radius: 5px 5px 0px 0px;
 }
 </style>
