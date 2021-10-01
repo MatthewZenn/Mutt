@@ -9,7 +9,7 @@
 
 <script>
 import getPosts from '../api/get-posts'
-import Card from './Card'
+import Card from "@/components/Card"
 
 export default {
   name: "ListComponent",
@@ -25,7 +25,6 @@ export default {
       if(!isVisible) {
         return;
       }
-      console.log("hello");
       this.loadMorePosts();
     }
   },
@@ -33,10 +32,7 @@ export default {
     return {
       posts: [],
     }
-  },
-  beforeMount() {
   }
-
 }
 </script>
 
