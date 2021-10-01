@@ -6,31 +6,25 @@
     <div class="link">
       <h2>Using <a href='https://dog.ceo/dog-api/'>https://dog.ceo/dog-api/</a></h2>
     </div>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
+    <ListComponent/>
   </div>
 </template>
 
 <script>
-import Card from './components/Card.vue'
+import ListComponent from "@/components/ListComponent";
 
 export default {
   name: 'App',
   components: {
-    Card
+    ListComponent
   },
-
   methods:{
       moveUp(){
            window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth'
-});
+          });
       }
   }
 }

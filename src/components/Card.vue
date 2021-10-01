@@ -1,24 +1,14 @@
 <template>
   <div class="posts">
-    <img class="dog" :src="dimg">
+    <img class="dog" :src="post.dimg">
   </div>
 </template>
 
 <script>
-import {get} from "axios";
-
 export default {
   name: "Card",
-  data() {
-    return {
-      dimg: null
-    }
-  },
-  mounted() {
-    get('https://dog.ceo/api/breeds/image/random')
-      .then(response => {
-        this.dimg = response.data.message
-      })
+  props: {
+    post: Object
   }
 }
 </script>
