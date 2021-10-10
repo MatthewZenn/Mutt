@@ -21,8 +21,8 @@ export default {
   top: 150px;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #2C2F33;
-  border: 8px solid #23272A;
+  background-color: #1a1a1a;
+  border: 8px solid #141414;
 }
 .dog {
   width: 22rem;

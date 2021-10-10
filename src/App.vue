@@ -32,7 +32,7 @@ export default {
 
 <style>
 html, body {
-  background-color: #23272A;
+  background-color: #141414;
   color: white;
 }
 html::-webkit-scrollbar {
@@ -61,7 +61,7 @@ a {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #2C2F33;
+  background-color: #1a1a1a;
   z-index: 999;
 }
 .logo {
